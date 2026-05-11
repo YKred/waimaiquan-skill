@@ -84,30 +84,27 @@ if (triggered) {
 
 ## 安装
 
-### 方式一：作为 Claude Code Skill 使用（推荐）
-
-把这个文件夹复制到 Claude Code 的 skills 目录下即可，不需要安装任何依赖：
+### 方式一：一行命令安装（推荐）
 
 ```bash
-# Windows（PowerShell）
-$skillsDir = "$env:USERPROFILE\.claude\skills"
-xcopy /E /I "本项目文件夹路径" "$skillsDir\外卖优惠券"
-
-# macOS / Linux
-cp -r ./本项目文件夹路径 ~/.claude/skills/外卖优惠券
+npx skills add https://github.com/YKred/waimaiquan-skill.git --skill waimaiquan-skill
 ```
 
-复制完成后，重启 Claude Code，它会自动识别这个 Skill。当对话中提到"外卖红包"、"今天吃什么"、"点外卖怎么省钱"等关键词时，就会自动触发查询。
+### 方式二：把下面这段话直接发给 AI
 
-> **提示：** Claude Code 的 skills 目录通常位于 `~/.claude/skills/`（即用户主目录下的 `.claude/skills/` 文件夹）。
+> 帮我安装 waimaiquan-skill 这个 Claude Code skill。请按下面步骤做：
+>
+> 1. 确保 `~/.claude/skills/` 目录存在（不存在就创建）
+> 2. 执行 `git clone https://github.com/YKred/waimaiquan-skill.git ~/.claude/skills/waimaiquan-skill`
+> 3. 验证：`ls ~/.claude/skills/waimaiquan-skill/` 应该看到 README.md、index.js、scripts/ 等内容
+> 4. 告诉我安装好了，之后我说"外卖红包"、"今天吃什么"之类的话就会触发这个 skill
 
-### 方式二：在任意目录下直接使用
+把这段话复制粘贴给 Claude Code / Cursor / 任何有 shell 权限的 AI Agent，它会自动完成安装。
 
-不用安装，直接在项目文件夹里跑：
+### 方式三：手动命令行
 
 ```bash
-cd 本项目目录
-node index.js
+git clone https://github.com/YKred/waimaiquan-skill.git ~/.claude/skills/waimaiquan-skill
 ```
 
 ## 项目结构
