@@ -12,6 +12,31 @@
 - 支持微信文本、飞书消息卡片、纯文本三种输出格式
 - 零依赖，仅使用 Node.js 内置模块，不需要安装任何第三方包
 
+## 安装
+
+### 方式一：一行命令安装（推荐）
+
+```bash
+npx skills add https://github.com/YKred/waimaiquan-skill.git --skill waimaiquan-skill
+```
+
+### 方式二：把下面这段话直接发给 AI
+
+> 帮我安装 waimaiquan-skill 这个 Claude Code skill。请按下面步骤做：
+>
+> 1. 确保 `~/.claude/skills/` 目录存在（不存在就创建）
+> 2. 执行 `git clone https://github.com/YKred/waimaiquan-skill.git ~/.claude/skills/waimaiquan-skill`
+> 3. 验证：`ls ~/.claude/skills/waimaiquan-skill/` 应该看到 README.md、index.js、scripts/ 等内容
+> 4. 告诉我安装好了，之后我说"外卖红包"、"今天吃什么"之类的话就会触发这个 skill
+
+把这段话复制粘贴给 Claude Code / Cursor / 任何有 shell 权限的 AI Agent，它会自动完成安装。
+
+### 方式三：手动命令行
+
+```bash
+git clone https://github.com/YKred/waimaiquan-skill.git ~/.claude/skills/waimaiquan-skill
+```
+
 ## 怎么用
 
 ### 直接查询
@@ -80,31 +105,6 @@ if (triggered) {
       → 低价酒店
 
 复制到微信打开 → 一个个领 → 再点餐
-```
-
-## 安装
-
-### 方式一：一行命令安装（推荐）
-
-```bash
-npx skills add https://github.com/YKred/waimaiquan-skill.git --skill waimaiquan-skill
-```
-
-### 方式二：把下面这段话直接发给 AI
-
-> 帮我安装 waimaiquan-skill 这个 Claude Code skill。请按下面步骤做：
->
-> 1. 确保 `~/.claude/skills/` 目录存在（不存在就创建）
-> 2. 执行 `git clone https://github.com/YKred/waimaiquan-skill.git ~/.claude/skills/waimaiquan-skill`
-> 3. 验证：`ls ~/.claude/skills/waimaiquan-skill/` 应该看到 README.md、index.js、scripts/ 等内容
-> 4. 告诉我安装好了，之后我说"外卖红包"、"今天吃什么"之类的话就会触发这个 skill
-
-把这段话复制粘贴给 Claude Code / Cursor / 任何有 shell 权限的 AI Agent，它会自动完成安装。
-
-### 方式三：手动命令行
-
-```bash
-git clone https://github.com/YKred/waimaiquan-skill.git ~/.claude/skills/waimaiquan-skill
 ```
 
 ## 项目结构
